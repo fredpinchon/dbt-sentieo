@@ -15,15 +15,15 @@ vars:
   ad_reporting__facebook_ads_enabled: True
   ad_reporting__snapchat_ads_enabled: False
     microsoft_ads_schema: bingads
-    microsoft_ads_database: bingads
+    microsoft_ads_database: sentieointegration
     linkedin_schema: linkedin_ads 
-    linkedin_database: linkedin_ads  
+    linkedin_database: sentieointegration  
     twitter_ads_schema: twitter_ads
-    twitter_ads_database: twitter  
+    twitter_ads_database: sentieointegration  
     facebook_ads_schema: facebook_ads
-    facebook_ads_database: facebook_ads 
+    facebook_ads_database: sentieointegration 
     google_ads_schema: adwords
-    google_ads_database: adwords 
+    google_ads_database: sentieointegration 
   
 # This setting configures which "profile" dbt uses for this project.
 profile: 'sentieo_redshift'
