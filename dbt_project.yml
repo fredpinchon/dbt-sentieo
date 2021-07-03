@@ -6,6 +6,25 @@ name: 'sentieo_ad_reporting'
 version: '1.0.0'
 config-version: 2
 
+vars:
+  ad_reporting__pinterest_enabled: False
+  ad_reporting__microsoft_ads_enabled: True
+  ad_reporting__linkedin_ads_enabled: True
+  ad_reporting__google_ads_enabled: True
+  ad_reporting__twitter_ads_enabled: True
+  ad_reporting__facebook_ads_enabled: True
+  ad_reporting__snapchat_ads_enabled: False
+    microsoft_ads_schema: bingads
+    microsoft_ads_database: bingads
+    linkedin_schema: linkedin_ads 
+    linkedin_database: linkedin_ads  
+    twitter_ads_schema: twitter_ads
+    twitter_ads_database: twitter  
+    facebook_ads_schema: facebook_ads
+    facebook_ads_database: facebook_ads 
+    google_ads_schema: adwords
+    google_ads_database: adwords 
+  
 # This setting configures which "profile" dbt uses for this project.
 profile: 'sentieo_redshift'
 
@@ -36,3 +55,16 @@ models:
       # Applies to all files under models/example/
       example:
           materialized: view
+# disable both pinterest models if not using pinterest ads
+  pinterest:
+    enabled: false
+  pinterest_source:
+    enabled: false
+
+
+
+  # disable both snapchat ads models if not using snapchat ads
+  snapchat_ads:
+    enabled: false
+  snapchat_ads_source:
+    enabled: false
