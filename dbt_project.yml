@@ -8,7 +8,7 @@ config-version: 2
 
 vars:
   ad_reporting__pinterest_enabled: False
-  ad_reporting__microsoft_ads_enabled: True
+  ad_reporting__microsoft_ads_enabled: False
   ad_reporting__linkedin_ads_enabled: True
   ad_reporting__google_ads_enabled: True
   ad_reporting__twitter_ads_enabled: True
